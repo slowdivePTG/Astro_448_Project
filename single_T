@@ -1,0 +1,74 @@
+digraph {
+	JWST_f_7 [label="JWST_f_7
+~
+Deterministic" shape=box]
+	JWST_f_4 [label="JWST_f_4
+~
+Deterministic" shape=box]
+	Mobs [label="Mobs
+~
+Deterministic" shape=box]
+	log_T [label="log_T
+~
+Uniform" shape=ellipse]
+	JWST_f_2 [label="JWST_f_2
+~
+Deterministic" shape=box]
+	JWST_f_1 [label="JWST_f_1
+~
+Deterministic" shape=box]
+	D [label="D
+~
+Normal" shape=ellipse]
+	T [label="T
+~
+Deterministic" shape=box]
+	JWST_f_3 [label="JWST_f_3
+~
+Deterministic" shape=box]
+	JWST_f_6 [label="JWST_f_6
+~
+Deterministic" shape=box]
+	JWST_f_0 [label="JWST_f_0
+~
+Deterministic" shape=box]
+	JWST_f_5 [label="JWST_f_5
+~
+Deterministic" shape=box]
+	log_Mobs [label="log_Mobs
+~
+Uniform" shape=ellipse]
+	subgraph cluster11761 {
+		F [label="F
+~
+Deterministic" shape=box]
+		label=11761 labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster8 {
+		obs [label="obs
+~
+Normal" shape=ellipse style=filled]
+		label=8 labeljust=r labelloc=b style=rounded
+	}
+	log_T -> T
+	log_Mobs -> Mobs
+	D -> F
+	Mobs -> F
+	T -> F
+	F -> JWST_f_0
+	F -> JWST_f_1
+	F -> JWST_f_2
+	F -> JWST_f_3
+	F -> JWST_f_4
+	F -> JWST_f_5
+	F -> JWST_f_6
+	F -> JWST_f_7
+	JWST_f_7 -> obs
+	JWST_f_4 -> obs
+	JWST_f_2 -> obs
+	JWST_f_1 -> obs
+	JWST_f_3 -> obs
+	JWST_f_6 -> obs
+	JWST_f_5 -> obs
+	JWST_f_0 -> obs
+}

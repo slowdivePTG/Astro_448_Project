@@ -1,0 +1,95 @@
+digraph {
+	T2 [label="T2
+~
+Deterministic" shape=box]
+	T1 [label="T1
+~
+Deterministic" shape=box]
+	JWST_f_4 [label="JWST_f_4
+~
+Deterministic" shape=box]
+	Mobs [label="Mobs
+~
+Deterministic" shape=box]
+	JWST_f_2 [label="JWST_f_2
+~
+Deterministic" shape=box]
+	JWST_f_7 [label="JWST_f_7
+~
+Deterministic" shape=box]
+	JWST_f_1 [label="JWST_f_1
+~
+Deterministic" shape=box]
+	Mobs2 [label="Mobs2
+~
+Deterministic" shape=box]
+	log_T1 [label="log_T1
+~
+Uniform" shape=ellipse]
+	log_Mobs2 [label="log_Mobs2
+~
+Uniform" shape=ellipse]
+	log_Mobs1 [label="log_Mobs1
+~
+Uniform" shape=ellipse]
+	Mobs1 [label="Mobs1
+~
+Deterministic" shape=box]
+	D [label="D
+~
+Normal" shape=ellipse]
+	JWST_f_3 [label="JWST_f_3
+~
+Deterministic" shape=box]
+	JWST_f_6 [label="JWST_f_6
+~
+Deterministic" shape=box]
+	JWST_f_0 [label="JWST_f_0
+~
+Deterministic" shape=box]
+	JWST_f_5 [label="JWST_f_5
+~
+Deterministic" shape=box]
+	log_T2 [label="log_T2
+~
+Uniform" shape=ellipse]
+	subgraph cluster11761 {
+		F [label="F
+~
+Deterministic" shape=box]
+		label=11761 labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster8 {
+		obs [label="obs
+~
+Normal" shape=ellipse style=filled]
+		label=8 labeljust=r labelloc=b style=rounded
+	}
+	log_T1 -> T1
+	log_T2 -> T2
+	log_Mobs1 -> Mobs1
+	log_Mobs2 -> Mobs2
+	Mobs2 -> Mobs
+	Mobs1 -> Mobs
+	T2 -> F
+	T1 -> F
+	Mobs2 -> F
+	D -> F
+	Mobs1 -> F
+	F -> JWST_f_0
+	F -> JWST_f_1
+	F -> JWST_f_2
+	F -> JWST_f_3
+	F -> JWST_f_4
+	F -> JWST_f_5
+	F -> JWST_f_6
+	F -> JWST_f_7
+	JWST_f_7 -> obs
+	JWST_f_4 -> obs
+	JWST_f_2 -> obs
+	JWST_f_1 -> obs
+	JWST_f_3 -> obs
+	JWST_f_6 -> obs
+	JWST_f_5 -> obs
+	JWST_f_0 -> obs
+}
